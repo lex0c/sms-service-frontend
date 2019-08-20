@@ -9,6 +9,8 @@ services:
     volumes:
       - .:/var/www/client
     working_dir: /var/www/client/
+    environment:
+      - API_BASE_URL=https://sms-service-backend.herokuapp.com/api
     command: bash -c "chmod +x /var/www/client/start.sh && /var/www/client/start.sh"
     networks:
       - web
