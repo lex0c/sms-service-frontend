@@ -7,7 +7,7 @@
 ```bash
 npm install
 ```
-### Para rodar está aplicação existe três maneiras:
+### Para rodar esta aplicação existem três maneiras:
 
 - `npm start` (roda o app apontando pro backend localhost)
 - `npm run remote` (roda o app apontando pro backend no Heroku)
