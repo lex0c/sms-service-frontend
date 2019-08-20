@@ -1,0 +1,28 @@
+version: '3.7'
+networks:
+  web:
+services:
+  frontend:
+    build:
+      context: .
+    container_name: frontend
+    volumes:
+      - .:/var/www/client
+    working_dir: /var/www/client/
+    command: bash -c "chmod +x /var/www/client/start.sh && /var/www/client/start.sh"
+    networks:
+      - web
+  frontserver:
+    image: nginx:1.16.1
+    container_name: frontserver
+    volumes:
+      - /home/leo/Workspace/volumes/nginx/html:/var/www/html
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    networks:
+      - web
+    ports:
+      - 80:80
+    links:
+      - frontend
+    depends_on:
+      - frontend

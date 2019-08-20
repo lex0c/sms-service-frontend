@@ -1,0 +1,19 @@
+.home-container {
+  width: 50%;
+  min-height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .content {
+    flex-grow: 1;
+    word-break: break-word;
+  }
+  > div {
+    width: 100%;
+  }
+  @media (max-width: 940px) {
+    width: 95%;
+  }
+}

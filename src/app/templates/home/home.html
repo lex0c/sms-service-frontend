@@ -1,0 +1,23 @@
+<div class="home-container">
+  <div>
+    <div><h1>SMS Service</h1><br /></div>
+    <div class="content">
+      <msg-box
+        title="Mensagem (encode/decode):"
+        keyup="vm.blur(event)"
+        output="vm.output"
+        limit="vm.limit"
+      ></msg-box>
+    </div>
+    <div><br /></div>
+    <div>
+      <h3>Histórico</h3>
+      <div class="card" ng-repeat="log in vm.logs" ng-if="vm.logs.length">
+        <strong>{{log.create_at | date: 'dd/MM/yyyy HH:mm'}}:</strong>&nbsp;{{log.payload}}
+      </div>
+      <div class="error-label" ng-if="!vm.logs.length">
+        Nenhum histórico de mensagens
+      </div>
+    </div>
+  </div>
+</div>

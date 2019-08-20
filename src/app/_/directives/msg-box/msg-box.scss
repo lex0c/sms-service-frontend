@@ -1,0 +1,23 @@
+.msg-box {
+  display: flex;
+  flex-direction: column;
+  textarea {
+    border: 1px solid #ccc;
+    resize: none;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  span {
+    margin: 5px 0;
+  }
+  .output {
+    background-color: #f8f8f8;
+    padding: 10px;
+    border-radius: 3px;
+  }
+  .info {
+    text-align: right;
+    color: #333;
+    font-size: .9em;
+  }
+}
