@@ -23,7 +23,7 @@
     vm.throttle = Utils.throttle(() => {
       if (!vm.output.sequence.length) return;
       vm.logs.push({
-        create_at: new Date(),
+        created_at: new Date(),
         payload: { ...vm.output },
     });
       HomeService.saveLog({ payload: vm.output });

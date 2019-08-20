@@ -13,7 +13,7 @@
     <div>
       <h3>Histórico</h3>
       <div class="card" ng-repeat="log in vm.logs" ng-if="vm.logs.length">
-        <strong>{{log.create_at | date: 'dd/MM/yyyy HH:mm'}}:</strong>&nbsp;{{log.payload}}
+        <strong>{{log.created_at | date: 'dd/MM/yyyy HH:mm'}}:</strong>&nbsp;{{log.payload}}
       </div>
       <div class="error-label" ng-if="!vm.logs.length">
         Nenhum histórico de mensagens

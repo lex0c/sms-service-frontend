@@ -14,7 +14,7 @@
     }
 
     this.saveLog = payload => {
-      return ApiService.query('POST', '/v1/logs', {} , { payload }, {})
+      return ApiService.query('POST', '/v1/logs', {} , { ...payload }, {})
       .then(resp => resp.data);
     }
 
