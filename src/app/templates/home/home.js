@@ -14,7 +14,9 @@
   function HomeCtrl($scope, CONSTANTS, Utils, HomeService) {
     const vm = this;
 
+    // TODO: bug ((Z*255)+(_*254))=(chars=1274)
     vm.limit = CONSTANTS.GSM_CHARACTERS_LIMIT;
+
     vm.output = { text: '', sequence: '', type: null };
     vm.logs = [];
 
@@ -52,10 +54,14 @@
     }
 
     const decode = value => {
+      // Poderia ser mais eficiente se fizesse o diff do estado anterior
+      // com o novo estado para iterar somente nessa diferença...
       return Utils.decode(value, CONSTANTS.NOT_QWERTY);
     }
 
     const encode = value => {
+      // Poderia ser mais eficiente se fizesse o diff do estado anterior
+      // com o novo estado para iterar somente nessa diferença...
       return Utils.encode(value, CONSTANTS.NOT_QWERTY);;
     }
   }
