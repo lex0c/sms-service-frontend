@@ -4,8 +4,6 @@
   angular
   	.module('frontend')
     .constant('CONSTANTS', {
-      API_BASE_URL: 'https://sms-service-backend.herokuapp.com/api',
-      // API_BASE_URL: 'http://localhost:4000/api',
       NOT_QWERTY: {
         2: ['A', 'B', 'C'],
         3: ['D', 'E', 'F'],

@@ -5,8 +5,9 @@
   "description": "",
   "main": "src/app/app.js",
   "scripts": {
-    "start": "npx gulp",
+    "start": "API_BASE_URL=http://localhost:4000/api node envs.js && npx gulp",
     "build": "npx gulp build",
+    "remote": "API_BASE_URL=https://sms-service-backend.herokuapp.com/api node envs.js && npm run build && node server.js",
     "test": "npx jest",
     "postinstall": "npx bower install --no-interactive --allow-root"
   },
