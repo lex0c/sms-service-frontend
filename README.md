@@ -20,6 +20,3 @@ npm test
 
 ### Heroku
 - [https://simple-sms-service.herokuapp.com](https://simple-sms-service.herokuapp.com)
-
-### Histórico de commits
-- [https://github.com/lleocastro/sms-service](https://github.com/lleocastro/sms-service)
